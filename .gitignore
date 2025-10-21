@@ -1,1 +1,5 @@
 .kan_env
+scripts/__pycache__
+utils/__pycache__
+utils/networks/__pycache__
+media
