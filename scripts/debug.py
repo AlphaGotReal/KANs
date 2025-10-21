@@ -5,4 +5,3 @@ class Debug(Scene):
         self.play(
             Write(Text("hello world"), run_time=3)
         )
-
