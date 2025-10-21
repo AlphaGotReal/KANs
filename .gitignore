@@ -1,6 +1,5 @@
 .kan_env
 scripts/__pycache__
-utils/__pycache__
-utils/networks/__pycache__
+networks/__pycache__
 media
 tests/__pycache__
