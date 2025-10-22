@@ -14,6 +14,3 @@ class Normal(nn.Module):
 
     def forward(self, x):
         return self.lin2(self.activation(self.lin1(x)))
-
-    def intermediate(self, x):
-        return self.activation(self.lin1(x))
