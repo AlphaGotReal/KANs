@@ -1,5 +1,5 @@
 # KANs
-an implementation of KANs in pytorch, to present to class for 5 marks and some notes to revisit and understand it
+KANs, to present to class for 5 marks and some notes to revisit and understand it
 
 ---
 
@@ -14,7 +14,7 @@ Let \( f : [0, 1]^n \to \mathbb{R} \).
 
 $$
 f(x_1, x_2, \ldots, x_n) =
-\sum_{q=1}^{2n+1} \phi_q\!\left(
+\sum_{q=1}^{2n+1} \phi_q \left(
     \sum_{p=1}^{n} \psi_{p,q}(x_p)
 \right)
 $$
@@ -64,10 +64,9 @@ Update of spline grids. We update each grid on the fly according to its input ac
 
 #### Parameter count
 
-$L \rarr$ number of layers
-$N \rarr$ max neuron (for worst case scenario)
-$k \rarr$ spline order on $G$ intervals
+$L \to$ number of layers
+$N \to$ max neuron (for worst case scenario)
+$k \to$ spline order on $G$ intervals
 
 parameter count = $O(N^{2}L(G+k)) \sim O(N^2LG)$
 
-#### Approximation and scaling laws
