@@ -23,7 +23,7 @@ where $\phi_q : \mathbb{R} \to \mathbb{R}$ and $\psi_{p,q} : [0, 1] \to \mathbb{
 
 ### Kolmogorov Arnold Networks
 
-Now the neural network is laid such that these $\phi_p \space \&\space \psi_{p,q}$ are learnable functions. In the paper they are defined are splines where the control points are learned.
+Now the neural network is laid such that these $\phi_p$ and $\psi_{p,q}$ are learnable functions. In the paper they are defined are splines where the control points are learned.
 
 ### Innovation
 
