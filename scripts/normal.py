@@ -16,14 +16,15 @@ import torch.optim as optim
 from networks.normal import Normal
 
 activation = nn.ReLU()
-model = Normal(activation, 500)
+model = Normal(activation, [1, 64, 64, 64, 64, 1])
+print(model)
 loss = nn.MSELoss()
 optimizer = optim.Adam(model.parameters(), lr=0.01)
 
 # dataset
 X = torch.tensor(np.linspace(-3.14, 3.14, 1000), dtype=torch.float32)
 X = X.reshape(X.shape + (1,))
-Y = nn.ReLU()(torch.sin(X)) - torch.cos(X)
+Y = nn.ReLU()(torch.sin(X * 2 * np.pi)) - torch.cos(X)
 
 def plot():
     global X, Y, model
@@ -40,7 +41,7 @@ for epoch in range(10000):
     optimizer.zero_grad()
     l.backward()
     optimizer.step()
-    print(f"loss={l}\t\t", end='\r', flush=True)
+    print(f"epoch={epoch} \tloss={l}\t\t", end='\r', flush=True)
     plot()
 
 plot()
