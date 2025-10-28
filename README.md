@@ -10,12 +10,16 @@ Explaining the [paper](https://arxiv.org/pdf/2404.19756)
 
 **Theorem:** It states that every multivariate function (function with multiple inputs but a single output) can be expressed as a two layered sum of single variable functions.
 
-Let $f: [0, 1]^{n} \to \mathbb{R}$ 
+Let \( f : [0, 1]^n \to \mathbb{R} \).
+
 $$
-f(x_1, x_2, \ldots, x_n) = 
-\sum_{q=1}^{2n+1} \phi_{q}\!\left( \sum_{p=1}^{n} \psi_{p,q}(x_p) \right)
+f(x_1, x_2, \ldots, x_n) =
+\sum_{q=1}^{2n+1} \phi_q\!\left(
+    \sum_{p=1}^{n} \psi_{p,q}(x_p)
+\right)
 $$
-where $\phi_{p}: \mathbb{R} \to \mathbb{R}$  and $\psi_{p,q}: [0, 1] \to \mathbb{R} $
+
+where \( \phi_q : \mathbb{R} \to \mathbb{R} \) and \( \psi_{p,q} : [0, 1] \to \mathbb{R} \).
 
 ### Kolmogorov Arnold Networks
 
