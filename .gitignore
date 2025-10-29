@@ -3,3 +3,4 @@ scripts/__pycache__/
 networks/__pycache__/
 tests/__pycache__/
 media/
+model/
