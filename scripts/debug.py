@@ -1,6 +1,7 @@
 #! /usr/bin/env python
 
 from kan import *
+
 torch.set_default_dtype(torch.float64)
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 print(device)
@@ -19,5 +20,20 @@ model(dataset['train_input'])
 model.plot()
 
 model.fit(dataset, opt="LBFGS", steps=50, lamb=0.001);
+# results = model.fit(
+#     dataset,
+#     opt="LBFGS",
+#     steps=50,
+#     lamb=0.001,
+#     save_fig=True,
+#     img_folder="./viz_frames",
+#     save_fig_freq=1,     # frame each step
+#     beta=3               # transparency scaling in the plot
+# )
+# 
+# for step in range(100):
+#     print(f"training step: {step}")
+#     model.fit(dataset, opt="LBFGS", steps=1, lamb=0.001)
+
 model.plot()
 
